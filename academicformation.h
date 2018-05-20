@@ -1,5 +1,5 @@
 ///Cabecera de la clase academicformation.h
-#ifndef ACADEMICFORMATION_H_INCLUDED
+#ifndef ACADEMICFORMATION_H_INCLUDED#ifndef ACADEMICFORMATION_H_INCLUDED
 #define ACADEMICFORMATION_H_INCLUDED
 
 /*** Cabeceras del sistema ***/
@@ -9,18 +9,21 @@
 
 class Formation{
     private:
-        std::string gradeName;     ///Nombre del Grado (Licenciatura, maestria, doctorado, especialidad)
+        std::string grade;         ///Grado (Licenciatura, maestria, doctorado, especialidad)
+        std::string gradeName;     ///Nombre del grado (Ing. Computacion)
         std::string institution;   ///Institucion de procedencia
         Date beginDate;            ///Fecha de inicio
         Date finishDate;           ///Fecha final
-        Date degreeDate;           ///Fecha de obtención de titulo
+        Date degreeDate;           ///Fecha de obtenciÃ³n de titulo
         std::string idCard;        ///numero de cedula profesional
+
     public:
-        Formation();                 ///Constructor base
-        ///Formation(const Formation&);   /// Constructor Copia
-        Formation(const std::string&, std::string&, Date&, Date&, Date&, std::string& );  ///Constructor Parametrizado
+        Formation();                        ///Constructor base
+        ///Formation(const Formation&);     /// Constructor Copia
+        Formation(const std::string&, std::string&, std::string&, Date&, Date&, Date&, std::string& );  ///Constructor Parametrizado
 
         /*** getters ***/
+        std::string getGrade();
         std::string getGradeName();
         std::string getInstitution();
         Date getBeginDate();
@@ -29,6 +32,7 @@ class Formation{
         std::string getIdCard();
 
         /*** setters ***/
+        void setGrade(const std::string& );
         void setGradeName(const std::string&);
         void setInstitution(const std::string&);
         void setBeginDate(const Date&);
@@ -37,7 +41,6 @@ class Formation{
         void setIdCard(const std::string&);
 
         ///void toString();     ///Imprime direccion completa
-
 
 };
 
